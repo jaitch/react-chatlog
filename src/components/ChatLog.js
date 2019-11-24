@@ -1,17 +1,17 @@
 import React from 'react';
 import ChatEntry from './ChatEntry';
 import './ChatLog.css';
+import { tsPropertySignature } from '@babel/types';
 
-const ChatLog = ({allMessages}) =>
+const ChatLog = (props) =>
   <ul className='chat-log'>
-  {allMessages.map((message, i) => {
-    return (
+  return (
+  {props.messages.map((message, i) => {
       <li key={i}>
-        <ChatEntry {...message} />
+        <ChatEntry message={message} first={props.first} second={props.second}/>
       </li>
-    )
   })
-  }
-  </ul>
+})
+</ul>
 
 export default ChatLog;
