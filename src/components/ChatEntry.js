@@ -5,10 +5,10 @@ import './ChatEntry.css';
 const ChatEntry = (props) => {
   const chooseStyle = () => {
     let style = 'chat-entry';
-    if (props.order === 'first') {
+    if (props.message.sender === props.first) {
       style = 'chat-entry.local';
     }
-    else if (props.order === 'second') {
+    else if (props.message.sender === props.second) {
       style = 'chat-entry.remote';
     }
     return style;

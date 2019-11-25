@@ -14,7 +14,7 @@ const ChatLog = (props) =>
     // }
     return (
       <li key={i}>
-        <ChatEntry message={message} order={order}/>
+        <ChatEntry message={message} first={props.first} second={props.second}/>
       </li>
     )
   })
