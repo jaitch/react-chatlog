@@ -6,10 +6,10 @@ const ChatEntry = (props) => {
   const chooseStyle = () => {
     let style = 'chat-entry';
     if (props.message.sender === props.first) {
-      style = 'chat-entry.local';
+      style = 'chat-entry local';
     }
     else if (props.message.sender === props.second) {
-      style = 'chat-entry.remote';
+      style = 'chat-entry remote';
     }
     return style;
   }
