@@ -16,7 +16,7 @@ const App = () => {
     <div id="App">
       <header className="header">
 
-        <h1 className="h1">Chat between {chatMessages[0].sender} and {chatMessages[1].sender}</h1>
+        <h1 className="h1">Chat between {first} and {second}</h1>
       </header>
       <main className="main">
         <ChatLog messages={chatMessages} first={first} second={second}/>

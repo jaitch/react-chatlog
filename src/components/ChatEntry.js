@@ -4,7 +4,13 @@ import './ChatEntry.css';
 
 const ChatEntry = (props) => {
   const chooseStyle = () => {
-    let style = ('chat-entry' + ' ' + ({props.message.sender} === {props.first}) ? 'local' : 'remote');
+    let style = 'chat-entry';
+    if (props.order === 'first') {
+      style = 'chat-entry.local';
+    }
+    else if (props.order === 'second') {
+      style = 'chat-entry.remote';
+    }
     return style;
   }
   return (
